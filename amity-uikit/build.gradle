@@ -1,0 +1,24 @@
+apply from: "../buildsystem/activity.gradle"
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.amity.socialcloud.uikit'
+    buildTypes {
+        release {
+            consumerProguardFiles 'amity-proguard-rules.pro'
+        }
+        debug {
+            consumerProguardFiles 'amity-proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask).configureEach {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+dependencies {
+    api project(path: ':social')
+    api project(path: ':chat')
+    api "com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-sdk:$amityMessagingSdkVersion"
+}

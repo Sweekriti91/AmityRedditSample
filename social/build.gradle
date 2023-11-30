@@ -1,0 +1,35 @@
+apply from: "../buildsystem/activity.gradle"
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    namespace 'com.amity.socialcloud.uikit.community'
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask).configureEach {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+
+dependencies {
+    api project(path: ':common')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$amityKotlinVersion"
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:1.3.2"
+
+    api ("com.linkedin.android.spyglass:spyglass:3.0.1")
+    api("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-video-publisher:$amityMessagingSdkVersion")
+    api("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-video-player:$amityMessagingSdkVersion")
+}

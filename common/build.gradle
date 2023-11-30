@@ -1,0 +1,22 @@
+apply from: "../buildsystem/activity.gradle"
+apply plugin: 'com.android.library'
+
+
+android {
+    namespace 'com.amity.socialcloud.uikit.common'
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask).configureEach {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+
+dependencies {
+    implementation 'commons-io:commons-io:2.11.0'
+    api 'com.jakewharton.timber:timber:4.7.1'
+}
