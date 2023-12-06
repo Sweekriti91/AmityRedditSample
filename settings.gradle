@@ -20,3 +20,5 @@ include ':social'
 include ':amity-uikit'
 include ':common'
 include ':chat'
+include ':amitywrap'
+

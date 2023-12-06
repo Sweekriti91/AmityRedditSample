@@ -23,7 +23,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
 import com.amity.socialcloud.sdk.api.core.AmityCoreClient
-import com.amity.socialcloud.sdk.api.core.endpoint.AmityEndpoint
+import com.example.amitywrap.AmityWrap
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -32,9 +32,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        AmityCoreClient
-            .setup("", AmityEndpoint.US)
-            .subscribe()
+//        AmityCoreClient
+//            .setup("", AmityEndpoint.US)
+//            .subscribe()
+
+        val test = AmityWrap()
+        test.setupAmity("b0edec5932dff8304f658c4d060a178cd858deebb3673e29")
 
         println("AMITY STATUS :: " + AmityCoreClient.getCurrentSessionState())
 
@@ -44,8 +47,8 @@ class MainActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                val userIdState = remember { mutableStateOf(TextFieldValue("academy9989")) }
-                val displayNameState = remember { mutableStateOf(TextFieldValue("Academy IT 9989")) }
+                val userIdState = remember { mutableStateOf(TextFieldValue("username")) }
+                val displayNameState = remember { mutableStateOf(TextFieldValue("displayname")) }
 
                 TextField(
                     value = userIdState.value,
@@ -79,6 +82,17 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.padding(vertical = 48.dp, horizontal = 32.dp)
                 ) {
                     Text("Login")
+                }
+
+                Button(
+                    onClick = {
+                        lifecycleScope.launch {
+                            navigateToHomePage()
+                        }
+                    },
+                    modifier = Modifier.padding(vertical = 48.dp, horizontal = 32.dp)
+                ) {
+                    Text("Home Page")
                 }
             }
         }

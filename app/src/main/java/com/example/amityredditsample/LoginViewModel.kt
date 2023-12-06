@@ -3,8 +3,8 @@ package com.example.amityredditsample
 import androidx.lifecycle.ViewModel
 import com.amity.socialcloud.sdk.api.core.AmityCoreClient
 import com.amity.socialcloud.sdk.core.session.AccessTokenRenewal
-import com.amity.socialcloud.sdk.helper.core.coroutines.await
 import com.amity.socialcloud.sdk.model.core.session.SessionHandler
+import com.example.amitywrap.AmityWrap
 
 class LoginViewModel : ViewModel() {
 
@@ -13,18 +13,23 @@ class LoginViewModel : ViewModel() {
         displayName: String
     ) {
         println("AMITY STATUS :: " + AmityCoreClient.getCurrentSessionState());
-        AmityCoreClient.login(userId, sessionHandler = MySessionHandler())
-            .authToken("")
-            .displayName(displayName)
-            .build()
-            .submit()
-            .doOnComplete {
-                println("Complete!");
-            }
-            .doOnError {
-                println(("Could not register user " + it.message));
-            }
-            .await()
+
+
+        val test = AmityWrap()
+        test.loginAmity(userId,displayName, "709a5ed13e9ec21fa236ecb3422d650873a57afc")
+
+//        AmityCoreClient.login(userId, sessionHandler = MySessionHandler())
+//            .authToken("9dec888c75eacb8e0562e334f4674ae327324003")
+//            .displayName(displayName)
+//            .build()
+//            .submit()
+//            .doOnComplete {
+//                println("Complete!");
+//            }
+//            .doOnError {
+//                println(("Could not register user " + it.message));
+//            }
+//            .await()
     }
 
     private class MySessionHandler : SessionHandler {

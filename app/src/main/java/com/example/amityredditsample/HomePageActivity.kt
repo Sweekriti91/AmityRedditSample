@@ -2,27 +2,27 @@ package com.example.amityredditsample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.amity.socialcloud.uikit.community.home.fragments.AmityCommunityHomePageFragment
-import com.example.amityredditsample.databinding.AmityActivityHomepageBinding
+import com.example.amitywrap.AmityWrap
 
 
 class HomePageActivity : AppCompatActivity() {
 
-    private lateinit var binding: AmityActivityHomepageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = AmityActivityHomepageBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView((R.layout.amity_activity_homepage))
+
         loadFragment()
     }
 
     private fun loadFragment() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragment = AmityCommunityHomePageFragment.newInstance().build()
+        val test = AmityWrap()
+        val fragment = test.getHomeNewsFeed()
         fragmentTransaction.replace(
-            R.id.fragmentContainer,
-            fragment
+            R.id.content,
+            fragment,
+            fragment.javaClass.simpleName
         )
         fragmentTransaction.commit()
     }
