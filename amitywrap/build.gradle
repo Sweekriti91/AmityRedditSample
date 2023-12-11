@@ -47,5 +47,34 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 
-    implementation project(path: ':amity-uikit')
+    api project(':amity-uikit')
+    api project(':social')
+    api project(':chat')
+    api project(':common')
+
+//    api files('/Users/sweeky/WorkStuff/Oscars/Amity_AARS/amity-uikit-release.aar')
+//    api files('/Users/sweeky/WorkStuff/Oscars/Amity_AARS/common-release.aar')
+//    api files('/Users/sweeky/WorkStuff/Oscars/Amity_AARS/social-release.aar')
+//    api files('/Users/sweeky/WorkStuff/Oscars/Amity_AARS/chat-release.aar')
+
+
+    api 'com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-sdk:6.22.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation 'com.github.EkoCommunications:Matisse:0.5.3-5'
+    api "com.github.EkoCommunications:AmityRxLifeCycle:1.1.2-beta01"
+    // Glide dependencide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    //exo player
+    implementation "com.google.android.exoplayer:exoplayer-core:2.18.5"
+    implementation "com.google.android.exoplayer:extension-okhttp:2.18.5"
+    implementation "com.google.android.exoplayer:exoplayer-ui:2.18.5"
+
+
+//    implementation project(path: ':amity-uikit')
+
 }

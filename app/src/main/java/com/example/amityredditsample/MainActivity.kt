@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 //            .subscribe()
 
         val test = AmityWrap()
-        test.setupAmity("b0edec5932dff8304f658c4d060a178cd858deebb3673e29")
+        test.setupAmity("APIKEY")
 
         println("AMITY STATUS :: " + AmityCoreClient.getCurrentSessionState())
 
@@ -76,7 +76,7 @@ class MainActivity : ComponentActivity() {
                         val displayName = displayNameState.value.text
                         lifecycleScope.launch {
                             viewModel.login(userId, displayName)
-                            navigateToHomePage()
+//                            navigateToHomePage()
                         }
                     },
                     modifier = Modifier.padding(vertical = 48.dp, horizontal = 32.dp)

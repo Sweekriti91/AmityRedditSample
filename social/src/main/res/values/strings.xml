@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="amity_recommended_for_you">Recommended for you</string>
-    <string name="amity_community_followers">%1$s followers | %2$s mutual friends</string>
-    <string name="amity_todays_trending">Today’s Trending</string>
-    <string name="amity_number_of_followers">%1$s and %2$s are following</string>
+    <string name="amity_community_followers" formatted="false">%1$s followers | %2$s mutual friends</string>
+    <string name="amity_todays_trending">Todays Trending</string>
+    <string name="amity_number_of_followers" formatted="false">%1$s and %2$s are following</string>
     <string name="amity_posts">posts</string>
     <string name="amity_followers">followers</string>
     <string name="amity_mutual_friends">are members</string>
@@ -28,7 +28,7 @@
     <string name="amity_add">Add</string>
     <string name="amity_selected">Selected</string>
     <string name="amity_hello_blank_fragment">Hello blank fragment</string>
-    <string name="amity_feed_post_time">%d mins</string>
+    <string name="amity_feed_post_time" formatted="false">%d mins</string>
     <string name="amity_post_compose_hint">What\'s going on…</string>
     <string name="amity_post">Post</string>
     <string name="amity_post_caps">POST</string>
@@ -42,14 +42,14 @@
     <string name="amity_comment">Comment</string>
     <string name="amity_like">Like</string>
     <string name="amity_liked">Liked</string>
-    <string name="amity_image_count">+%d</string>
+    <string name="amity_image_count"  formatted="false">+%d</string>
     <string name="amity_view_all_files">View all files</string>
     <string name="amity_delete">Delete</string>
     <string name="amity_leave">Leave</string>
     <string name="amity_close">Close</string>
     <string name="amity_successfully_created_community">Successfully created community</string>
     <string name="amity_delete_post_title">Delete this post?</string>
-    <string name="amity_delete_post_warning_message">This post will be permanently deleted. You’ll no longer to see and find this post</string>
+    <string name="amity_delete_post_warning_message">This post will be permanently deleted. Youll no longer to see and find this post</string>
     <string name="amity_my_timeline">My Timeline</string>
     <string name="amity_post_to">Post to</string>
     <string name="amity_post_as_community">Post as Community</string>
@@ -66,7 +66,7 @@
     <string name="amity_reply">Reply</string>
     <string name="amity_view_replies">View replies</string>
     <string name="amity_view_more_replies">View more replies</string>
-    <string name="amity_view_all_replies">View all %d replies</string>
+    <string name="amity_view_all_replies" formatted="false">View all %d replies</string>
     <string name="amity_view_all_comments">View all comments…</string>
     <string name="amity_edit_reply">Edit Reply</string>
     <string name="amity_delete_reply">Delete Reply</string>
@@ -117,7 +117,7 @@
     <string name="amity_attachment_upload_failed_message">Some files could not be uploaded. Please remove and try again</string>
     <string name="amity_no_community">No community found</string>
     <string name="amity_bullet">•</string>
-    <string name="amity_members_count">%1$s members</string>
+    <string name="amity_members_count" formatted="false">%1$s members</string>
     <string name="amity_preparing">Preparing...</string>
     <string name="amity_community_setting">Community Settings</string>
     <string name="amity_basic_info">Basic Info</string>
@@ -125,9 +125,9 @@
     <string name="amity_close_community">Close community</string>
     <string name="amity_close_community_description">Closing this community will remove the community page and all its content and comments.</string>
     <string name="amity_leave_community">Leave community</string>
-    <string name="amity_moderator_leave_community_msg">Leaving community, you’ll give up your moderator status and won’t no longer be able to post and interact in this community.</string>
-    <string name="amity_moderator_leave_community_error_msg">You’re the only moderator in this group. To leave community, nominate other members to moderator role.</string>
-    <string name="amity_last_moderator_leave_community_msg">As you’re the last moderator and member, leaving will also close this community. All posts shared in community will be deleted. This cannot be undone.</string>
+    <string name="amity_moderator_leave_community_msg">Leaving community, youll give up your moderator status and wont no longer be able to post and interact in this community.</string>
+    <string name="amity_moderator_leave_community_error_msg">Youre the only moderator in this group. To leave community, nominate other members to moderator role.</string>
+    <string name="amity_last_moderator_leave_community_msg">As youre the last moderator and member, leaving will also close this community. All posts shared in community will be deleted. This cannot be undone.</string>
     <string name="amity_close_community_msg">All members will be removed from the community. All posts, messages, reactions, and media shared in community will be deleted. This cannot be undone.</string>
     <string name="amity_leave_community_msg">You won\’t no longer be able to post and interact in this community after leaving.</string>
     <string name="amity_leave_community_error_title">Unable to leave community</string>
@@ -137,7 +137,7 @@
     <string name="amity_post_characters_limit_error_title">Unable to type text into post</string>
     <string name="amity_comment_characters_limit_error_title">Unable to type text into comment</string>
     <string name="amity_characters_limit_error_msg">You have reached 50,000 characters limit.</string>
-    <string name="amity_characters_limit_dynamic_error_msg">You have reached %,d characters limit.</string>
+    <string name="amity_characters_limit_dynamic_error_msg"  formatted="false">You have reached %,d characters limit.</string>
     <string name="amity_unable_turn_off_post_review_title">Unable to turn off post review</string>
     <string name="amity_unable_turn_on_post_review_title">Unable to turn on post review</string>
     <string name="amity_something_went_wrong_pls_try">Something went wrong. Please try again later.</string>
@@ -163,12 +163,12 @@
     <string name="amity_add_comment_error_message">Unable to add comment</string>
     <string name="amity_update_comment_error_message">Unable to update comment</string>
     <plurals name="amity_feed_number_of_likes">
-        <item quantity="one">%s like</item>
-        <item quantity="other">%s likes</item>
+        <item quantity="one" formatted="false">%s like</item>
+        <item quantity="other" formatted="false">%s likes</item>
     </plurals>
     <plurals name="amity_feed_number_of_comments">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one" formatted="false">%d comment</item>
+        <item quantity="other" formatted="false">%d comments</item>
     </plurals>
     <string name="amity_share_to_my_timeline">Share to My Timeline</string>
     <string name="amity_share_to_group">Share to Group</string>
@@ -179,7 +179,7 @@
     <string name="amity_remove_user_msg">This user won\’t no longer be able to search, post and interact in the community</string>
     <string name="amity_unrecognised_post_type">We couldn\’t recognize this post.</string>
     <string name="amity_something_went_wrong">Something went wrong</string>
-    <string name="amity_replying_to">Replying to %s</string>
+    <string name="amity_replying_to" formatted="false">Replying to %s</string>
     <string name="amity_approve_member_post">Approve member posts</string>
     <string name="amity_approve_member_post_desc">Posts by members have to be reviewed and approved by community moderator.</string>
     <string name="amity_allow_notifications">Allow Notifications</string>
@@ -208,7 +208,7 @@
     <string name="amity_undo_report">Undo Report</string>
     <string name="amity_manage">Manage</string>
     <string name="amity_others">Others</string>
-    <string name="amity_unfollow_user">Unfollow %s</string>
+    <string name="amity_unfollow_user" formatted="false">Unfollow %s</string>
     <string name="amity_unfollow">Unfollow</string>
     <string name="amity_share_profile">Share profile</string>
     <string name="amity_no_results">No results found</string>
@@ -217,8 +217,8 @@
     <string name="amity_follow_requests">Follow requests</string>
     <string name="amity_private_account">This account is private</string>
     <string name="amity_follow_user">Follow this user to see all posts</string>
-    <string name="amity_follow_error">Unable to follow %s</string>
-    <string name="amity_unfollow_error">Unable to unfollow %s</string>
+    <string name="amity_follow_error" formatted="false">Unable to follow %s</string>
+    <string name="amity_unfollow_error" formatted="false">Unable to unfollow %s</string>
     <string name="amity_pending_requests">Pending requests</string>
     <string name="amity_requests_review"> Your requests are waiting for review</string>
     <string name="amity_accept">Accept</string>
@@ -228,7 +228,7 @@
     <string name="amity_remove_user">Remove user</string>
     <string name="amity_removed">Removed</string>
     <string name="amity_unable_to_remove">Unable to remove user</string>
-    <string name="amity_unfollow_description">You’ll have to send a request again to follow %s. Continue?</string>
+    <string name="amity_unfollow_description" formatted="false">Youll have to send a request again to follow %s. Continue?</string>
     <string name="amity_refresh_error">Couldn\’t refresh feed</string>
     <string name="amity_settings">Settings</string>
     <string name="amity_error_loading_feed">Error while loading feed</string>
@@ -239,8 +239,8 @@
     <string name="amity_content_no_reactions">Please try again or contact the administrator for more information</string>
 
     <plurals name="amity_community_banner_number_of_pending_posts">
-        <item quantity="one">%s post need approval</item>
-        <item quantity="other">%s posts need approval</item>
+        <item quantity="one" formatted="false">%s post need approval</item>
+        <item quantity="other" formatted="false">%s posts need approval</item>
     </plurals>
     <string name="amity_pending_posts_banner_member_message">Your posts are pending for review</string>
     <string name="amity_delete_pending_post_warning_message">This post will be permanently deleted from the pending list </string>
@@ -256,7 +256,7 @@
     <string name="amity_skip_for_now">Skip for now</string>
     <string name="amity_customize_community_settings">Community settings</string>
     <string name="amity_customize_community_title">Customize your\ncommunity</string>
-    <string name="amity_customize_community_description">You’ve successfully created a\ncommunity! Now let\'s manage\npermissions that work best for you</string>
+    <string name="amity_customize_community_description">Youve successfully created a\ncommunity! Now let\'s manage\npermissions that work best for you</string>
 
     <string name="amity_gallery_title">Gallery</string>
     <string name="amity_gallery_no_photos">No photos yet</string>
@@ -277,7 +277,7 @@
     <string name="amity_video_stream_title_hint">Livestream title</string>
     <string name="amity_video_stream_description_hint">Tap to add post description…</string>
     <string name="amity_video_stream_connecting">Connecting</string>
-    <string name="amity_video_stream_live_with_time">LIVE %s:%s</string>
+    <string name="amity_video_stream_live_with_time" formatted="false">LIVE %s:%s</string>
     <string name="amity_video_stream_finish">Finish</string>
     <string name="amity_video_stream_stop_confirmation_title">Stop livestream</string>
     <string name="amity_video_stream_stop_confirmation_description">Are you sure you want to stop the stream?</string>
@@ -299,12 +299,12 @@
 
 
     <string name="amity_poll_question">Poll question*</string>
-    <string name="amity_poll_question_hint">What’s your poll question?</string>
+    <string name="amity_poll_question_hint">Whats your poll question?</string>
     <string name="amity_poll_question_error">You have reached 500 characters limit.</string>
     <string name="amity_poll_answer">Options*</string>
     <string name="amity_poll_answer_hint">Create at least 2 options</string>
     <string name="amity_poll_add_answer">Add option</string>
-    <string name="amity_poll_answer_error_empty">Poll option can’t be empty.</string>
+    <string name="amity_poll_answer_error_empty">Poll option cant be empty.</string>
     <string name="amity_poll_answer_error_exceed_limit">You have reached 200 characters limit.</string>
     <string name="amity_poll_multiple_answers">Multiple selection</string>
     <string name="amity_poll_multiple_answers_hint">Turn on to allow others to vote more than one option</string>
@@ -315,31 +315,31 @@
     <string name="amity_poll_status_closed">Final results</string>
     <string name="amity_poll_submit_vote">Submit vote</string>
     <plurals name="amity_poll_status_closed_in_days">
-        <item quantity="one">Poll ends in %s day</item>
-        <item quantity="other">Poll ends in %s days</item>
+        <item quantity="one" formatted="false">Poll ends in %s day</item>
+        <item quantity="other" formatted="false">Poll ends in %s days</item>
     </plurals>
     <plurals name="amity_poll_status_closed_in_hours">
-        <item quantity="one">Poll ends in %s hour</item>
-        <item quantity="other">Poll ends in %s hours</item>
+        <item quantity="one" formatted="false">Poll ends in %s hour</item>
+        <item quantity="other" formatted="false">Poll ends in %s hours</item>
     </plurals>
     <plurals name="amity_poll_status_closed_in_minutes">
         <item quantity="one">Poll ends in %s minute</item>
         <item quantity="other">Poll ends in %s minutes</item>
     </plurals>
     <plurals name="amity_poll_vote_count">
-        <item quantity="zero">%s Vote</item>
-        <item quantity="one">%s Vote</item>
-        <item quantity="other">%s Votes</item>
+        <item quantity="zero" formatted="false">%s Vote</item>
+        <item quantity="one" formatted="false">%s Vote</item>
+        <item quantity="other" formatted="false">%s Votes</item>
     </plurals>
     <plurals name="amity_poll_expand">
-        <item quantity="one">%s more option</item>
-        <item quantity="other">%s more options</item>
+        <item quantity="one" formatted="false">%s more option</item>
+        <item quantity="other" formatted="false">%s more options</item>
     </plurals>
     <string name="amity_poll_expand_voted">View full results</string>
     <string name="amity_delete_poll_title">Delete poll?</string>
-    <string name="amity_delete_poll_message">This poll will be permanently deleted. You’ll no longer to see and find this poll.</string>
+    <string name="amity_delete_poll_message">This poll will be permanently deleted. Youll no longer to see and find this poll.</string>
     <string name="amity_close_poll_title">Close poll?</string>
-    <string name="amity_close_poll_message">Schedule you’ve set will be removed and poll will be closed immediately.</string>
+    <string name="amity_close_poll_message">Schedule youve set will be removed and poll will be closed immediately.</string>
     <string name="amity_delete_poll">Delete Poll</string>
     <string name="amity_close_poll">Close Poll</string>
     <string name="amity_reaction_separator">•</string>

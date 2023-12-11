@@ -16,7 +16,7 @@ class LoginViewModel : ViewModel() {
 
 
         val test = AmityWrap()
-        test.loginAmity(userId,displayName, "709a5ed13e9ec21fa236ecb3422d650873a57afc")
+        test.loginAmity(userId,displayName, "AUTH_TOKEN")
 
 //        AmityCoreClient.login(userId, sessionHandler = MySessionHandler())
 //            .authToken("9dec888c75eacb8e0562e334f4674ae327324003")

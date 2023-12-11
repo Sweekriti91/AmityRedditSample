@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import com.amity.socialcloud.sdk.api.core.AmityCoreClient
 import com.amity.socialcloud.sdk.api.core.endpoint.AmityEndpoint
 import com.amity.socialcloud.sdk.core.session.AccessTokenRenewal
-import com.amity.socialcloud.sdk.helper.core.coroutines.await
 import com.amity.socialcloud.sdk.model.core.session.SessionHandler
 import com.amity.socialcloud.uikit.community.home.fragments.AmityCommunityHomePageFragment
 import com.amity.socialcloud.uikit.community.mycommunity.fragment.AmityMyCommunityFragment
@@ -20,7 +19,12 @@ public class AmityWrap () {
             .subscribe()
     }
 
-    public suspend fun loginAmity(userName: String, displayName : String, authToken: String)
+    public fun PrintAmityStatus() : String
+    {
+        return AmityCoreClient.getCurrentSessionState().toString()
+    }
+
+    public fun loginAmity(userName: String, displayName : String, authToken: String)
     {
         AmityCoreClient.login(userName, sessionHandler = MySessionHandler())
             .authToken(authToken)
@@ -33,20 +37,20 @@ public class AmityWrap () {
             .doOnError {
                 println(("Could not register user " + it.message));
             }
-            .await()
+            .subscribe()
     }
 
-    public fun getHomeNewsFeed(): Fragment {
+    public fun showHomeNewsFeed(): Fragment {
         return AmityCommunityHomePageFragment.newInstance()
             .build()
     }
 
-    public fun getProfilePage(activity: AppCompatActivity): Fragment {
+    public fun showProfilePage(activity: AppCompatActivity): Fragment {
         return AmityUserProfilePageFragment.newInstance(AmityCoreClient.getUserId())
             .build(activity)
     }
 
-    public fun getMyCommunityPage(): Fragment {
+    public fun showMyCommunityPage(): Fragment {
         return AmityMyCommunityFragment.newInstance()
             .build()
     }
